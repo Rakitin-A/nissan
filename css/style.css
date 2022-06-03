@@ -1,0 +1,581 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: "NissanBrand";
+    src: url("../fonts/NissanBrand-Regular.woff");
+}
+@font-face {
+    font-family: "NissanBrand bold";
+    src: url("../fonts/NissanBrand-Bold.woff");
+}
+
+body {
+    font-family: "NissanBrand", sans-serif;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 20px;
+    color: #000;
+}
+ul {
+    margin: 0;
+    list-style: none;
+}
+li {
+    padding-left: 0;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+h1,
+h2,
+h3,
+h4,
+p {
+    margin: 0;
+}
+.container {
+    width: 1540px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+.header {
+    margin-bottom: 100px;
+}
+
+.title {
+    font-family: "NissanBrand bold";
+    font-size: 36px;
+    line-height: 44px;
+    text-transform: uppercase;
+    text-align: center;
+}
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-height: 110px;
+    padding: 21px 0;
+}
+.header__timer {
+    display: flex;
+    align-items: center;
+    max-height: 110px;
+}
+.header__timer-mobile {
+    display: none;
+}
+.header__timer-text {
+    font-size: 28px;
+    text-transform: uppercase;
+    color: #343434;
+    max-width: 252px;
+    line-height: 120%;
+    margin-right: 60px;
+}
+.btn {
+    border: none;
+    background-color: #c3002f;
+    padding: 22px 22px;
+    color: #ffffff;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "NissanBrand bold";
+    font-size: 16px;
+    line-height: 20px;
+    cursor: pointer;
+}
+.btn-black {
+    border: none;
+    background-color: #343434;
+    padding: 22px 22px;
+    color: #ffffff;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "NissanBrand bold";
+    font-size: 16px;
+    line-height: 20px;
+    cursor: pointer;
+}
+.timer__items {
+    font-family: "NissanBrand bold";
+    display: flex;
+    font-size: 40px;
+    line-height: 40px;
+    color: #c3002f;
+}
+.timer__item {
+    position: relative;
+    min-width: 60px;
+    margin-left: 27px;
+    margin-right: 27px;
+    padding-bottom: 15px;
+    text-align: center;
+}
+.timer__item::before {
+    content: attr(data-title);
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: -17px;
+    transform: translateX(-50%);
+    font-size: 14px;
+    font-weight: 400;
+    color: #343434;
+}
+.timer__item:not(:last-child)::after {
+    content: ":";
+    position: absolute;
+    right: -30px;
+}
+.header__phone {
+    font-family: "NissanBrand bold";
+    font-size: 22px;
+    margin-right: 40px;
+    position: relative;
+}
+.header__phone::before {
+    position: absolute;
+    content: url("../images/icon/phone.svg");
+    left: -30px;
+    top: -5px;
+    width: 34px;
+    height: 34px;
+}
+.header__info {
+    background-image: url("../images/main-banner.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+    height: 690px;
+    width: 100%;
+    position: relative;
+    z-index: 8;
+}
+.header__info::after {
+    position: absolute;
+    content: "";
+    background-color: #343434;
+    opacity: 0.7;
+    width: 100%;
+    height: 60px;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.header__info-container {
+    max-width: 1015px;
+    margin: 0 auto;
+}
+.header__info-title {
+    font-family: "NissanBrand bold";
+    font-size: 36px;
+    line-height: 44px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #ffffff;
+    padding: 6px 0 10px;
+    margin-bottom: 13px;
+}
+.header__info-box {
+    padding-left: 30px;
+}
+.header__info-event {
+    max-width: 740px;
+    background: #ffffff;
+    opacity: 0.7;
+    padding: 23px 65px;
+    margin-bottom: 13px;
+}
+.header__info-text {
+    font-size: 28px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: #c3002f;
+}
+.header__info-btn {
+    max-width: 220px;
+}
+.product-items {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.product-item {
+    max-width: 740px;
+    background-color: rgba(52, 52, 52, 0.1);
+    padding: 16px 27px 27px;
+    margin-bottom: 75px;
+}
+.product-title {
+    margin-bottom: 50px;
+}
+.product-item__title {
+    font-family: "NissanBrand bold";
+    font-size: 36px;
+    line-height: 44px;
+    text-transform: uppercase;
+}
+.product-item__top-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 17px;
+}
+.product-item__price {
+    font-family: "NissanBrand bold";
+    font-size: 36px;
+    line-height: 44px;
+    text-transform: uppercase;
+    color: #c3002f;
+}
+.product-item__credit {
+    font-family: "NissanBrand bold";
+    font-size: 28px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: #ffffff;
+    position: relative;
+    z-index: 1;
+}
+.product-item__credit::after {
+    content: url("../images/icon/vect.png");
+    position: absolute;
+    top: -8px;
+    right: -27px;
+    z-index: -1;
+}
+.product-slide {
+    margin-bottom: 17px;
+}
+.product-slide__thumb,
+.product-slide__thumb-first,
+.product-slide__thumb-two,
+.product-slide__thumb-end {
+    width: 686px;
+    margin-top: 17px;
+}
+.product-slide__thumb-item {
+    margin-right: 22px;
+    height: 142px;
+}
+.product-slide__thumb-item img,
+.product-slide__thumb-first img,
+.product-slide__thumb-two img,
+.product-slide__thumb-end img {
+    cursor: pointer;
+    width: 227px;
+    height: 142px;
+    object-fit: contain;
+}
+.product-slide__big,
+.product-slide__big-first,
+.product-slide__big-two,
+.product-slide__thumb-end {
+    width: 686px;
+}
+.product-slide__big img,
+.product-slide__big-first img,
+.product-slide__big-two img,
+.product-slide__big-end img{
+    width: 686px;
+    height: 360px;
+    object-fit: cover;
+}
+
+.product-item__offers {
+    max-width: 510px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.product-item__offers-text {
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: uppercase;
+    text-align: left;
+    margin-bottom: 38px;
+    position: relative;
+}
+.product-item__offers-text::before {
+    position: absolute;
+    content: "";
+    left: -58px;
+    top: -10px;
+    width: 43px;
+    height: 43px;
+    background-color: #c3002f;
+}
+.product-item__offers-text--traid::before {
+    background-image: url("../images/icon/car.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.product-item__offers-text--present::before {
+    background-image: url("../images/icon/present.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.product-item__offers-text--money::before {
+    background-image: url("../images/icon/money.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.product-item__offers-text--pig::before {
+    background-image: url("../images/icon/свинья.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.product-item__offers-l,
+.product-item__offers-r {
+    padding-left: 42px;
+}
+.product-item__buttons {
+    display: flex;
+    justify-content: space-between;
+}
+.product-item__button {
+    width: 335px;
+}
+.footer {
+    height: 90px;
+    background-color: #343434;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #c3002f;
+}
+#blink {
+    -webkit-animation: blink 2s linear infinite;
+    animation: blink 2s linear infinite;
+}
+@-webkit-keyframes blink {
+    0% {
+        color: rgb(128, 0, 0);
+    }
+    50% {
+        color: rgb(183, 65, 14);
+    }
+    100% {
+        color: rgb(128, 0, 0);
+    }
+}
+@keyframes blink {
+    0% {
+        color: rgb(128, 0, 0);
+    }
+    50% {
+        color: rgb(183, 65, 14);
+    }
+    100% {
+        color: rgb(128, 0, 0);
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .container {
+        width: 375px;
+        padding: 0;
+    }
+    .header {
+        margin: 0;
+    }
+    .header__inner {
+        justify-content: start;
+        padding: 10px 0 18px;
+    }
+    .header__img {
+        width: 73px;
+        height: 62px;
+        margin-right: 150px;
+    }
+
+    .header__phone {
+        font-size: 14px;
+        line-height: 24px;
+        margin-right: 10px;
+    }
+    .header__phone::before {
+        content: url("../images/icon/phone-mob.svg");
+        width: 30px;
+        height: 30px;
+    }
+    .header__btn {
+        position: absolute;
+        padding: 10px 0;
+        bottom: -100px;
+        z-index: 10;
+        width: 90%;
+        margin: 0 auto;
+        left: 5%;
+        background-image: url("../images/icon/phone-mob-white.svg");
+        background-repeat: no-repeat;
+        background-position: 20%;
+    }
+
+    .header__timer {
+        position: absolute;
+        bottom: -20px;
+        left: 5%;
+        z-index: 10;
+        display: block;
+        width: 370px;
+    }
+    .timer__item {
+        margin-left: 12px;
+        margin-right: 12px;
+    }
+    .timer__item::before {
+        font-size: 14px;
+        line-height: 20px;
+        color: #ffffff;
+        font-weight: 400;
+    }
+    .header__timer-text {
+        color: #ffffff;
+        font-size: 22px;
+        line-height: 120%;
+        min-width: 370px;
+    }
+    .header__info {
+        background-image: url("../images/main-banner-mobile.jpg");
+        background-position: bottom center;
+    }
+    .header__info-title,
+    .header__info::after {
+        display: none;
+    }
+    .header__info-box {
+        padding: 0;
+    }
+    .header__info-event {
+        padding: 15px 10px 10px;
+    }
+    .header__info-event p {
+        font-size: 24px;
+    }
+    .header__info-text {
+        font-size: 26px;
+        text-align: center;
+    }
+    .header__info-btn {
+        display: none;
+    }
+    .product-title {
+        margin: 0;
+        font-size: 28px;
+        line-height: 44px;
+        padding: 26px 0 20px;
+    }
+    .product-item {
+        max-width: 375px;
+        padding: 10px;
+        position: relative;
+        margin-bottom: 10px;
+        overflow: hidden;
+    }
+    .product-item::before {
+        position: absolute;
+        content: "xtrail";
+        font-family: "NissanBrand bold";
+        font-size: 150px;
+        top: -8px;
+        right: 49px;
+        text-transform: uppercase;
+        writing-mode: vertical-lr;
+        text-orientation: upright;
+        letter-spacing: -86px;
+        color: #c3002f;
+        z-index: 1;
+        opacity: 0.05;
+    } 
+     .product-item--qash::before {
+        position: absolute;
+        content: "qashqai";
+        font-family: "NissanBrand bold";
+        font-size: 150px;
+        top: -80px;
+        right: 49px;
+        text-transform: uppercase;
+        writing-mode: vertical-lr;
+        text-orientation: upright;
+        letter-spacing: -86px;
+        color: #c3002f;
+        z-index: 1;
+        opacity: 0.05;
+    }
+
+    .product-item__top-content {
+        display: block;
+    }
+    .product-item__title {
+        font-size: 26px;
+        line-height: 28px;
+    }
+    .product-item__price {
+        font-size: 26px;
+        line-height: 28px;
+    }
+    .product-item__top-l {
+        margin-bottom: 20px;
+    }
+    .product-item__credit {
+        font-size: 25px;
+        padding-left: 25px;
+    }
+    .product-item__credit::after {
+        content: url("../images/icon/vect-mob.png");
+        left: 0;
+    }
+    .product-slide__big img,
+    .product-slide__big-first img,
+    .product-slide__big-two img,
+    .product-slide__big-end img{
+        width: 355px;
+        object-fit: contain;
+        height: auto;
+    }
+    .product-slide__thumb,
+    .product-slide__thumb-first,
+    .product-slide__thumb-two,
+    .product-slide__thumb-end {
+        margin-top: 5px;
+        width: 350px;
+    }
+    .product-slide__thumb-item img,
+    .product-slide__thumb-first img,
+    .product-slide__thumb-two img,
+    .product-slide__thumb-end img {
+        width: 120px;
+        height: 70px;
+    }
+    .product-slide__thumb-item {
+        height: auto;
+    }
+    .product-item__offers {
+        flex-direction: column;
+        padding-left: 64px;
+    }
+    .product-item__buttons {
+        flex-direction: column;
+    }
+    .product-item__button {
+        margin: 0 auto;
+    }
+    .product-item__button {
+        width: 260px;
+        font-size: 12px;
+        height: 42px;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+    footer p{
+        text-align: center;
+        line-height: 34px;
+    }
+}
