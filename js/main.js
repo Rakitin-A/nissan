@@ -63,7 +63,7 @@ $(function(){
 
 
 // конечная дата, например 1 июля 2022
-const deadline = new Date(2022, 06, 01);
+const deadline = new Date(2022, 08, 01);
 // id таймера
 let timerId = null;
 // склонение числительных
